@@ -1,14 +1,12 @@
 package web.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Objects;
-
 public class Car {
-    private String model;
-    private String series;
-    private int year;
-
-    public Car() {
-    }
+    private final String model;
+    private final String series;
+    private final int year;
 
     public Car(String model, String series, int year) {
         this.model = model;
@@ -20,22 +18,12 @@ public class Car {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
     public String getSeries() {
-        return model;
+        return series;
     }
 
-    public void setSeries(String model) {
-        this.model = model;
-    }
-    public int getYears() {
+    public int getYear() {
         return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     @Override
