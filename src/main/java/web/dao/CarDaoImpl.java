@@ -35,7 +35,6 @@ public class CarDaoImpl implements CarDao {
             count = 0;
             List<Car> list1 = null;
         }
-        // List<Car> list1 = null;
         return carList.stream().limit(count).collect(Collectors.toList());
     }
 }
