@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class CarDaoImpl implements CarDao {
     private static List<Car> carList;
 
-    public CarDaoImpl() {
+    {
         carList = new ArrayList<>();
         carList.add(new Car("CAR_1", "SERIAL_1", 2020));
         carList.add(new Car("CAR_2", "SERIAL_2", 2021));
@@ -31,11 +31,11 @@ public class CarDaoImpl implements CarDao {
 
     @Override
     public List<Car> getListCars(int count) {
-        count = Math.abs(count);
-        if (count == 0 || count > 5) {
-            return carList;
+        if (count <= 0) {
+            count = 0;
+            List<Car> list1 = null;
         }
+        // List<Car> list1 = null;
         return carList.stream().limit(count).collect(Collectors.toList());
-
     }
 }
