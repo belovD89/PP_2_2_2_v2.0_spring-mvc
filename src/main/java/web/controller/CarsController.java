@@ -11,6 +11,7 @@ import web.dao.CarDaoImpl;
 @Controller
 public class CarsController {
     private final CarDao carDao;
+
     public CarsController(CarDao carDao) {
         this.carDao = carDao;
     }

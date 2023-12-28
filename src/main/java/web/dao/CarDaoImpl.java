@@ -31,6 +31,7 @@ public class CarDaoImpl implements CarDao {
 
     @Override
     public List<Car> getListCars(int count) {
+        count = Math.abs(count);
         if (count == 0 || count > 5) {
             return carList;
         }
